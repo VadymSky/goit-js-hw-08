@@ -80,7 +80,7 @@ function clickGallery(event) {
     
     event.preventDefault();    
     
-    let largeImage = clickImage.dataset.source;
+    const largeImage = clickImage.dataset.source;
         
     let instance = basicLightbox.create(`
         <img src="${largeImage}" alt="${clickImage.alt}"/> 
