@@ -64,7 +64,7 @@ const images = [
       },
     ];
     
-const listOfGallery = images
+let listOfGallery = images
     .map(image => `<li class="gallery-item"><a class="gallery-link" href="${image.original}"><img class="gallery-image" src="${image.preview}" data-source="${image.original}" alt="${image.description}"/></a></li>`)
     .join('');
   
@@ -74,15 +74,15 @@ document.querySelector('.gallery').addEventListener('click', clickGallery);
 
 function clickGallery(event) {
     
-    const clickImage = event.target;
+    let clickImage = event.target;
         
     if (clickImage.nodeName !== 'IMG') return;
     
     event.preventDefault();    
     
-    const largeImage = clickImage.dataset.source;
+    let largeImage = clickImage.dataset.source;
         
-    const instance = basicLightbox.create(`
+    let instance = basicLightbox.create(`
         <img src="${largeImage}" alt="${clickImage.alt}"/> 
     `);
              
