@@ -74,7 +74,7 @@ document.querySelector('.gallery').addEventListener('click', clickGallery);
 
 function clickGallery(event) {
     
-    let clickImage = event.target;
+    const clickImage = event.target;
         
     if (clickImage.nodeName !== 'IMG') return;
     
